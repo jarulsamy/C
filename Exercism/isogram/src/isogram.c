@@ -15,10 +15,9 @@ bool is_isogram(const char phrase[])
     for (int i = 0; i < len; i++)
     {
         c = tolower(phrase[i]);
-        if (c > 'a' && c < 'z')
+        if (c >= 'a' && c <= 'z')
         {
             hash_map[c - 'a']++;
-
             if (hash_map[c - 'a'] > 1)
                 return false;
         }
